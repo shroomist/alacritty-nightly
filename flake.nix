@@ -39,7 +39,7 @@
           pkgconfig
           libxkbcommon
         ])
-          ++ pkgs.lib.optionals (system == "x86_64-darwin") (with pkgs.darwin.apple_sdk.frameworks; [
+          ++ pkgs.lib.optionals (stdenv.isDarwin) (with pkgs.darwin.apple_sdk.frameworks; [
           AppKit
           CoreGraphics
           CoreServices
